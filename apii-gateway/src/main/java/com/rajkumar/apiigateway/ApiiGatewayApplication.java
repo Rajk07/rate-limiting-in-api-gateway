@@ -5,17 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.rajkumar.apiigateway.ratelimit.interceptor.RateLimitInterceptor;
 
 @SpringBootApplication
 @EnableZuulProxy
-public class ApiiGatewayApplication implements WebMvcConfigurer{
+public class ApiiGatewayApplication {
 
 	@Autowired
-	//@Lazy
+	@Lazy
 	RateLimitInterceptor rateLimitInterceptor;
 	
 
@@ -23,12 +21,6 @@ public class ApiiGatewayApplication implements WebMvcConfigurer{
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(ApiiGatewayApplication.class)
 					.run(args);
-	}
-	
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(rateLimitInterceptor)
-		.addPathPatterns("/api/service_1/throttling/users");
 	}
 
 }
