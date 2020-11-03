@@ -1,0 +1,4 @@
+https://www.baeldung.com/spring-bucket4j
+https://www.baeldung.com/java-caching-caffeine
+https://dzone.com/articles/how-to-build-an-api-gateway-with-netflix-zuul-spri
+https://stackoverflow.com/questions/39801282/handlerinterceptoradapter-and-zuul-filter?answertab=active#tab-top
