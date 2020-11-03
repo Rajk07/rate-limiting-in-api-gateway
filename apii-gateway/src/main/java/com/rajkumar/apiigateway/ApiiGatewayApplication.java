@@ -12,9 +12,7 @@ import com.rajkumar.apiigateway.ratelimit.interceptor.RateLimitInterceptor;
 @EnableZuulProxy
 public class ApiiGatewayApplication {
 
-	@Autowired
-	@Lazy
-	RateLimitInterceptor rateLimitInterceptor;
+	
 	
 
 	
