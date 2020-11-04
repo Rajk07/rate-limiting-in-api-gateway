@@ -2,3 +2,9 @@ https://www.baeldung.com/spring-bucket4j
 https://www.baeldung.com/java-caching-caffeine
 https://dzone.com/articles/how-to-build-an-api-gateway-with-netflix-zuul-spri
 https://stackoverflow.com/questions/39801282/handlerinterceptoradapter-and-zuul-filter?answertab=active#tab-top
+
+
+notes: 
+1. When we have Eureka discovery client in our services or api-gateway, requests are not being intercepted. So, this rate limiting works only if we do not have the following depenedencies in the pom.xml file 
+a. spring-cloud-starter-netflix-eureka-client
+b. spring-cloud-starter-openfeign
